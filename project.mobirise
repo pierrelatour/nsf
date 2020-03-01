@@ -1,0 +1,311 @@
+{
+  "settings": {
+    "name": "NSF",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "mobirise4",
+      "title": "Mobirise 4",
+      "styling": {
+        "primaryColor": "#149dcc",
+        "secondaryColor": "#ff3366",
+        "successColor": "#F7ED4A",
+        "infoColor": "#82786E",
+        "warningColor": "#879A9F",
+        "dangerColor": "#B1A374",
+        "mainFont": "Rubik",
+        "display1Font": "Rubik",
+        "display1Size": 4.25,
+        "display2Font": "Rubik",
+        "display2Size": 3,
+        "display5Font": "Rubik",
+        "display5Size": 1.5,
+        "display7Font": "Rubik",
+        "display7Size": ".75",
+        "display4Font": "Rubik",
+        "display4Size": 1,
+        "isRoundedButtons": true,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      },
+      "additionalSetColors": [
+        "#5dd726"
+      ]
+    },
+    "path": "@PROJECT_PATH@",
+    "siteFonts": [
+      {
+        "css": "'Rubik', sans-serif",
+        "name": "Rubik",
+        "url": "https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i"
+      }
+    ],
+    "versionFirst": "4.7.6",
+    "uniqCompNum": 18,
+    "versionPublish": "4.12.2",
+    "imageResize": true,
+    "screenshot": "screenshot.png",
+    "favicon": false,
+    "robotsSwitcher": false,
+    "sitemapSwitcher": false,
+    "sitemapSwitcherAuto": false,
+    "siteUrl": false,
+    "gdpr": {
+      "colorText": "#a7a7a7",
+      "colorLink": "#149dcc",
+      "underlineLink": false,
+      "text": "By continuing you agree to our <a href='terms.html'>Terms of Service</a> and <a href='policy.html'>Privacy Policy</a>."
+    },
+    "cookiesAlert": false
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Home",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "background": "@bgColor",
+            "& when (@fullWidth = false)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@gradientBg)": {
+              "background": "linear-gradient(0deg, @color2, @bgColor)"
+            },
+            ".image-block": {
+              "margin": "auto",
+              "& when (@fullWidth)": {
+                "width": "100% !important"
+              }
+            },
+            "figcaption": {
+              "position": "relative",
+              "div": {
+                "position": "absolute",
+                "bottom": "0",
+                "width": "100%"
+              }
+            },
+            "@media (max-width: 768px)": {
+              ".image-block": {
+                "width": "100% !important"
+              }
+            }
+          },
+          "_name": "image3",
+          "_customHTML": "<section group=\"Images & Videos\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"0\" step=\"1\" condition=\"fullWidth==false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"0\" step=\"1\" condition=\"fullWidth==false\">\n\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>        \n        \n        <input type=\"range\" inline title=\"Width\" name=\"imageSize\" min=\"20\" max=\"100\" value=\"80\" step=\"1\" condition=\"fullWidth==false\">\n\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#0f7699\" condition=\"fullWidth==false\">\n        <input type=\"checkbox\" title=\"Gradient\" name=\"gradientBg\" checked condition=\"fullWidth==false\">\n        <input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#cc2952\" condition=\"gradientBg && fullWidth==false\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <figure class=\"mbr-figure\" mbr-class=\"{'container':fullWidth==false}\">\n            <div class=\"image-block\" mbr-style=\"{'width':imageSize+'%'}\">\n                <img src=\"@PROJECT_PATH@/assets/images/doing-nothing-is-not-an-option-1500x500.jpg\" width=\"1400\" alt=\"Mobirise\" title>\n                <figcaption class=\"mbr-figure-caption mbr-figure-caption-over\" mbr-if=\"showText\">\n                    <div mbr-text class=\"container pb-5 mbr-white align-center mbr-fonts-style\" mbr-theme-style=\"display-1\"></div>\n                </figcaption>\n            </div>\n    </figure>\n</section>",
+          "_cid": "rRSIXxHkRm",
+          "_anchor": "image3-7",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "P": {
+              "color": "#767676"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#232323"
+            },
+            "H1": {
+              "text-align": "center"
+            }
+          },
+          "_name": "header16",
+          "_customHTML": "<section class=\"header1\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"1\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background4.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#5dd726\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-md-center\">\n            <div class=\"col-md-10 align-center\">\n                <h1 class=\"mbr-section-title mbr-bold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\">\n                    NORA SOLOMON FOUNDATION</h1>\n                <h3 class=\"mbr-section-subtitle mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showSubTitle\">\n                    Beautiful mobile websites\n                </h3>\n                <p class=\"mbr-text pb-3 mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><b>a CSR (Corporate Social Responsibility) initiative of Chintels India Pvt. Ltd., </b><br><b>a diversified real estate development company in the Delhi/NCR region</b></p>\n                <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-md btn-secondary\" href=\"page1.html\" data-app-placeholder=\"Type Text\"><span class=\"mbri-edit mbr-iconfont mbr-iconfont-btn\"></span>Contact Us</a> <a class=\"btn btn-md btn-secondary\" href=\"page2.html\" data-app-placeholder=\"Type Text\"><span class=\"mbri-globe-2 mbr-iconfont mbr-iconfont-btn\"></span>Pan-India Programs</a> <a class=\"btn btn-md btn-secondary\" href=\"page3.html\" data-app-placeholder=\"Type Text\"><span class=\"mbri-users mbr-iconfont mbr-iconfont-btn\"></span>Delhi/NCR Programs</a> <a class=\"btn btn-md btn-secondary\" href=\"page4.html\" data-app-placeholder=\"Type Text\"><span class=\"mbri-photo mbr-iconfont mbr-iconfont-btn\"></span>Uttarakhand Programs</a></div>\n            </div>\n        </div>\n    </div>\n\n</section>",
+          "_cid": "rRSCEg7qVM",
+          "_anchor": "header16-5",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".line": {
+              "background-color": "@lineColor",
+              "color": "@lineColor",
+              "align": "center",
+              "height": "2px",
+              "margin": "0 auto"
+            },
+            ".section-text": {
+              "padding": "2rem 0"
+            },
+            ".inner-container": {
+              "margin": "0 auto"
+            },
+            "@media (max-width: 768px)": {
+              ".inner-container": {
+                "width": "100% !important"
+              }
+            }
+          },
+          "_name": "content9",
+          "_customHTML": "<section class=\"mbr-section article content9\" group=\"Article\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Text Width\" name=\"innerWidth\" min=\"50\" max=\"100\" step=\"1\" value=\"76\">\n        <input type=\"range\" inline title=\"Line Width\" name=\"lineLength\" min=\"10\" max=\"100\" step=\"1\" value=\"10\">\n        <input type=\"color\" title=\"Line Color\" name=\"lineColor\" value=\"#149dcc\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"inner-container\" mbr-style=\"{'width': innerWidth + '%'}\">\n            <hr class=\"line\" mbr-style=\"{'width': lineLength + '%'}\">\n            <div class=\"section-text align-center mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".section-text\" mbr-text>The foundation is named after Nora Solomon, a tireless advocate for the rights of all children to be properly educated and cared for and a renowned educationist. It is supported by three generations of the Solomon family and is a fully certified and registered NGO in India and internationally.</div>\n            <hr class=\"line\" mbr-style=\"{'width': lineLength + '%'}\">\n        </div>\n        </div>\n</section>",
+          "_cid": "rRSMiUy0i4",
+          "_anchor": "content9-8",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    },
+    "page1.html": {
+      "settings": {
+        "meta_descr": "Site Creator Description",
+        "title": "Contact Us",
+        "order": 4
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-text": {
+              "color": "#767676",
+              "margin": "0",
+              "padding-top": "1.5rem"
+            },
+            "div.b": {
+              "padding-top": "2rem"
+            }
+          },
+          "_name": "contacts2",
+          "_customHTML": "<section class=\"mbr-section contacts2\" group=\"Forms\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n    <!---->\n    <mbr-parameters>\n        <!---->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"6\">\n        <!---->\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitleSect\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitleSect\">\n        <!---->\n        <input type=\"checkbox\" title=\"Show Adress\" name=\"showAdress\" checked>\n        <input type=\"checkbox\" title=\"Show Phone\" name=\"showPhone\" checked>\n        <input type=\"checkbox\" title=\"Show Mail\" name=\"showMail\" checked>\n        <!---->\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.9\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <!---->\n    <!--Overlay-->\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <!--Container-->\n    <div class=\"container\">\n        <div class=\"row\">\n            <!--Titles-->\n            <div class=\"title col-12\">\n                <h2 mbr-if=\"showTitleSect\" class=\"align-left mbr-fonts-style\" mbr-theme-style=\"display-1\"><p><span style=\"color: inherit; font-size: 4.25rem;\">Our Contacts &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p></h2>\n                <h3 mbr-if=\"showSubtitleSect\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\">\n                    Subtitle\n                </h3>\n            </div>\n            <div class=\"col-12\">\n                <div class=\"row justify-content-center\">\n                    <div class=\"col-12 col-md-4\" mbr-if=\"showAdress\">\n                        <div class=\"b b-adress\">\n                            <h5 class=\"align-left mbr-fonts-style m-0\" mbr-theme-style=\"display-5\">\n                                Address:\n                            </h5>\n                            <p class=\"mbr-text align-left mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Nora Solomon Foundation<br>Chintels Corporate Park<br>Chintels Chowk<br>Sector 114<br>Gurugram, Haryana &nbsp;122017<br>India</p>\n                        </div>\n                    </div>\n                    <div class=\"col-12 col-md-4\" mbr-if=\"showPhone\">\n                        <div class=\"b b-phone\">\n                            <h5 class=\"align-left mbr-fonts-style m-0\" mbr-theme-style=\"display-5\">\n                                Phone:\n                            </h5>\n                            <p class=\"mbr-text align-left mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                                +91 124 472 1000-49<br>Director of Chintels' CSR programs is<br>Aanchal Ahuja<br>Mob: +91 8130176664</p>\n                        </div>\n                    </div>\n                    <div class=\"col-12 col-md-4\" mbr-if=\"showMail\">\n                        <div class=\"b b-mail\">\n                            <h5 class=\"align-left mbr-fonts-style m-0\" mbr-theme-style=\"display-5\">\n                                E-mail:\n                            </h5>\n                            <p class=\"mbr-text align-left mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">aanchal@norasolomon.in</p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rRSNf7moQY",
+          "_anchor": "contacts2-9",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    },
+    "page2.html": {
+      "settings": {
+        "meta_descr": "Website Builder Description",
+        "title": "Pan-India Programs",
+        "order": 3
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-text, blockquote": {
+              "color": "#767676"
+            },
+            "DIV": {
+              "color": "#ff3366"
+            }
+          },
+          "_name": "content2",
+          "_customHTML": "<section class=\"mbr-section article content1\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 col-md-8 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-multiline mbr-article>\n                <blockquote><p><b>Education\n across India</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; <a href=\"index.html\" class=\"text-secondary\"><b><i>HOME</i></b></a><b style=\"font-size: 1.09rem;\"></b></p></blockquote><blockquote><p><b>•\tLPCEF, Leprosy Patients Children’s Education Fund project.</b><span style=\"font-size: 1.09rem; font-style: normal;\">An organisation that utilises its funds for the education of the emotionally and financially disadvantaged children of Leprosy victims and provides them with an equal opportunity to education and vocational training, to enable them to fully integrate into mainstream society as normal individuals.&nbsp;</span></p></blockquote><blockquote><b>•\tPORDAC, PROTECTION OF THE RIGHTS OF DIFFERENTLY ABLED CHILDREN, </b><span style=\"font-style: normal;\">NSF has committed the use of its space (23,000 sqft) in Vasant Kunj without levying rent or license fees to this organization. Also, true to its philanthropic commitment, NSF at its own behest, renovated and designed the school to render it suitable to the needs of the special needs students. NSF is helping parents of specially abled children address and conquer denial and depression associated with families of special children. Thus, NSF is funding the salary of counselors at PORDAC for parents and other family members to provide them the necessary counseling and support. NSF in collaboration with PORDAC has initiated a vocational training program in order to impart different skills to their children that shall enable and prepare them for a vocation.\n</span></blockquote><blockquote><b>•\tSAMADHAN, </b><span style=\"font-style: normal;\">NSF has, over the last decade, consistently partnered with SAMADHAN, an NGO that is working at raising awareness of intellectual disability, advocacy in local mainstream schools, therapy, special education and early intervention. Their emphasis is on inclusive education. We continue to make financial contributions to their various initiatives. They also advocate internationally in Asia.\n</span></blockquote><blockquote><b>•\tBaptist Church Trust Association (BCTA),</b><span style=\"font-style: normal;\"> a pan India organization that runs schools, hospitals and community outreach programs. The founding, and parent organization is the Baptist Missionary Society, England, which has been active in India since 1792 under William Carey. He translated and printed the bible into 17 Indian languages and founded Serampore College in 1818. It was the first college to educate women in Asia.\n</span></blockquote><blockquote><p><b>•\tCYAN International, </b><span style=\"font-style: normal;\">a charitable arm of the Baptist Missionary Society of Britain. They operate worldwide, mostly in vocational training. Recently they taught 15 poor women or widows how to design, tailor and sew clothing and then donated the pedal operated sewing machines to them to start a business. At last audit, all of them are earning a living and their lives have completely changed. \n</span></p></blockquote>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rRSQBs9639",
+          "_anchor": "content2-d",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    },
+    "page3.html": {
+      "settings": {
+        "meta_descr": "Web Page Generator Description",
+        "title": "Delhi/National Capitol Region",
+        "order": 2
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-text, blockquote": {
+              "color": "#767676"
+            }
+          },
+          "_name": "content2",
+          "_customHTML": "<section class=\"mbr-section article content1\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 col-md-8 mbr-fonts-style\" mbr-theme-style=\"display-4\" data-multiline mbr-article>\n                <blockquote><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Education\n and Health programs in the Delhi/NCR region</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<b> <a href=\"index.html\"><i><b>HOME</b></i></a></b></p></blockquote><blockquote><b>•\tAction for Autism, (AFA) </b><span style=\"font-style: normal;\">founded in 1991, is the pioneering, national and non-profit organisation which provides support and services to persons with autism in South Asia. NSF is funding the Action For Autism “Parent Counseling” programs and “Train the Trainer” program conducted at their center, in order to  guide and counsel parents and families of persons with Autism as well as produce efficient and skilled trainers to bridge the vast gap between supply and demand.\n</span></blockquote><blockquote><b>•\tASHISH CENTER, </b><span style=\"font-style: normal;\">NSF is sponsoring AFDA, Ashish Foundation for Differently Abled, a non-profit organisation established in 2007, for creating awareness of Autism Spectrum Disorder. Nora Solomon Foundation is funding AFDA for conducting Parent Awareness Programs, Panel Parental Group Counseling sessions and a training program for producing “Master Trainers”, who will be qualified to train volunteers and Special Educators.\n</span></blockquote><blockquote><b>•\tEmmanuel Hospital Group, </b><span style=\"font-style: normal;\">which operates hospitals across India and whose primary tenet is to assist the communities that it serves by providing health services to those most in need. We work within different programs that they sponsor and render financial assistance to their efforts which dovetail with our aims.\n</span></blockquote><blockquote><b>•\tSAMADHAN, </b><span style=\"font-style: normal;\">NSF has, over the last decade, consistently partnered with SAMADHAN, an NGO that is working at raising awareness of intellectual disability, advocacy in local mainstream schools, therapy, special education and early intervention. Their emphasis is on inclusive education. We continue to make financial contributions to their various initiatives.\n</span></blockquote><blockquote><b>•\tAASHALATA Victoria Wilkinson Trust, </b><span style=\"font-style: normal;\">NSF has fully financed the construction of a new wing that shall host a middle school at the Aashalata VWM Charitable Trust Primary School. The school has a 300 strong student body all of whom belong to the slum colony where the school was established on the outskirts of the capital city.\n</span></blockquote><blockquote><b>•\tASHISH CENTER, </b><span style=\"font-style: normal;\">NSF is sponsoring AFDA, Ashish Foundation for Differently Abled, a non-profit organisation established in 2007, for creating awareness of Autism Spectrum Disorder. Nora Solomon Foundation is funding AFDA for conducting Parent Awareness Programs, Panel Parental Group Counseling sessions and a training program for producing “Master Trainers”, who will be qualified to train volunteers and Special Educators.\n</span></blockquote><blockquote><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Health\n</b></p></blockquote><blockquote><b>•\tNora Solomon Medical Center,</b><span style=\"font-style: normal;\"> a brand-new hospital offering multi-specialty care for labourers of the Chintels India projects in the area and residents in Gurugram. It is in the process of being expanded into a 100-bed super specialty hospital providing exceptional health care to everyone.\n</span></blockquote><blockquote><b>•\tKashmir &amp; Uttarakhand floods and Nepal Earthquake, </b><span style=\"font-style: normal;\">NSF and BCTA donated two large truckloads of building supplies, emergency lighting and medicines. We made sure everything reached the remote villages that were affected. After the flooding and earthquakes, many privateers made money with donated supplies, we made sure that the villagers received them, thumb printed the receipt and had it counter signed by the Pradhan. We also supply free medicines and we help a refugee camp through BCTA in Kashmir.\n</span></blockquote><blockquote><b>•\tNSF Free Dispensary, </b><span style=\"font-style: normal;\">for years we have provided free medications to slum dwellers in Delhi. The stocks are provided by one of the Solomon family members who owns a pharmaceutical company, so all the medicines are fresh and up to date. No expired medications are dispensed.\n</span></blockquote>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rRSRyj02p8",
+          "_anchor": "content2-e",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    },
+    "page4.html": {
+      "settings": {
+        "meta_descr": "Website Builder Description",
+        "title": "State of Uttarakhand",
+        "order": 1
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-text, blockquote": {
+              "color": "#767676"
+            },
+            "DIV": {
+              "color": "#ff3366"
+            },
+            "P": {
+              "text-align": "left"
+            }
+          },
+          "_name": "content2",
+          "_customHTML": "<section class=\"mbr-section article content1\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 col-md-8 mbr-fonts-style\" mbr-theme-style=\"display-1\" data-multiline mbr-article>\n                <blockquote><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<b>EDUCATION</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; <a href=\"index.html\" class=\"text-secondary\"><b><i>HOME</i></b></a></p></blockquote><blockquote><span style=\"font-style: normal;\">•\t<b>Rafael Centre</b>, a school and training centre for Special Educators and Physio Therapists who work with differently abled children and adults. We have hired three physio therapists to travel among the various community centres of Samvedna and teach the caregivers of differently abled children how to improve the health, mobility and lives of their charges. Their progress and improvements are tracked and reported to make sure we are doing it properly and properly aiding them.\n</span></blockquote><blockquote><span style=\"font-style: normal;\">•\t<b>Rural Litigation and Entitlement Kendra (RLEK)</b>. We have paid the salaries of teachers in 15 of their schools, 963 students, for 6 years, and we are encouraged to use their schools as base points for mountain village outreach programs. We recently funded the building of two Senior Primary Schools in Jangheri and Miyani, which are fully certified and operational now. We also use these schools for health camps conducted periodically by HIMAID.\n</span></blockquote><blockquote><span style=\"font-style: normal;\">•<b>\tToon Masti, Ernst &amp; Young Foundation</b>, a CBSE certified, cartoon-based course from Nursery through Class 5 in Math and Social Science. Ernst and Young Foundation donated the program to us 7 years ago and we were the first in North India to use it in the schools we sponsor. Now 3.8 million students are using it, but we were the first.\n</span></blockquote><blockquote><span style=\"font-style: normal;\">•\t<b>Sampan</b>, a group of four English Medium schools scattered across Uttarakhand. We support salaries for their teachers so they can expand their efforts. They offer secular, high standard schooling to remote villages at no, or very low cost and seek to improve the quality of life of their students. The organization is 8 years old now and its founder and primary advisor is Dr. Nathan Grills, of the University of Melbourne, Australia who has conducted seminal work in the field and is co-author of a manual </span><b>“Setting up Community Health and Development Programmes in Low and Middle Income Settings”</b><span style=\"font-style: normal;\"> which is widely used in Asia.\n</span></blockquote><blockquote><span style=\"font-style: normal;\">•\t<b>Azim Premji Foundation</b>. NSF is the only non-governmental organization that they have ever worked with. We set up libraries in 15 schools using books donated by the organization. They also ran semi-annual advanced teacher training courses for us for 47 village teachers and helped them to obtain their required B.Ed. degrees in order to meet state requirements.\n</span></blockquote><blockquote><span style=\"font-style: normal;\">•\t<b>George Huhn</b>, founder of <b>DATAMACHINES</b> and a scientist, recently donated his software to be used to evaluate projects using a patented method he invented. He previously worked with DuPont-Merck on anti-aging compounds and was a consultant world-wide for large corporations but is now retired.\n</span></blockquote><blockquote><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>&nbsp; HEALTH<span style=\"font-style: normal;\">\n</span></b></p></blockquote><blockquote><span style=\"font-style: normal;\">•<b>\tSamvedna</b>, an effort of the Emmanuel Hospital Association, with whom we have worked for 6 years in providing funding for physiotherapists. This is the organization that works with the three physios that we hired, and they use Samvedna’s outreach centres to reach their families. The program has been very effective in changing perceptions and providing tools for the caregivers to use in their daily interactions with their charges.\n</span></blockquote><blockquote><span style=\"font-style: normal;\">•\t<b>Matli Clinic and Health Centre</b>, is operated by Dr. Dwayne Niebur, a family physician and his wife, JoAnn, a Registered Nurse and Midwife with specialized training from AIIMS for cervical cancer treatment in women. We are trying to set up a program where village women can make their own re-usable sanitary napkins as well as sell them for income.\n</span></blockquote><blockquote><span style=\"font-style: normal;\">•<b>\tHIMAID</b>, NSF helped found this organization, which is composed of a group of retired Indian Army doctors, some operating their own practices, that conducts health camps in remote areas of Uttarakhand. They come from various specialties and Nora Solomon Foundation financially supports the cost of the medicines that they dispense during their health camps in the mountains.\n</span></blockquote><blockquote><span style=\"font-style: normal;\">•\t<b>CHGN-UKC, Community Health Global Network, Uttarakhand cluster</b>. We provided funding for a drive to give 193 wheelchairs, walkers, crutches, canes and hand grippers to 288 people, 97 of them children. They came from four states for this and transport was provided. We continue to cooperate with and sponsor activities of this organization since they have a broad reach and our aims are the same.\n</span></blockquote><blockquote><span style=\"font-style: normal;\">•<b>\tKinderHilfWerke (KHW)</b>, a German sponsored organization that offers schooling for orphans and poor local villagers and operates outreach programs in conjunction with Lehman Hospital and members of the CHGN-UKC. They have been instrumental in finding and staging Special Education Teachers for the mountain villages operating under Emmanuel Hospital Association and the associated Samvedna organization of Landour Community Hospital, with whom we are working.\n</span></blockquote><blockquote><span style=\"font-style: normal;\">•\t<b>Dr. Purvesh Khatri, KhatriLab at Stanford University</b>, is a world-renowned TB expert who operates his own large lab at Stanford. We are currently working with him to try to implement his patented TB test system in India, which uses a blood sample, not sputum, to verify the existence of antibodies to TB in a patient’s bloodstream and can do so in 30 minutes. It currently meets WHO standards for accuracy and low false positive rates. This is a long-term project, in only the initial phase so far, but we may use our village populations for testing, education and prevention, since Uttarakhand has the highest rate of TB per population in India. Something few people are aware of.\n</span></blockquote><blockquote><span style=\"font-style: normal;\">•\t<b>Hamara Centre</b>, works with extremely poor, differently abled children of local farmers outside Roorkie. They provide a pick and drop service to their centre and NSF supports them with needed physio and educational materials to continue their work.\n</span></blockquote>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rRSS6uMHBR",
+          "_anchor": "content2-f",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
